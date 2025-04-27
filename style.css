@@ -1,3 +1,4 @@
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -5,130 +6,205 @@
 }
 
 body {
-  display: flex;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fffaf3;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
   color: #333;
 }
 
+/* Sidebar Styling */
 .sidebar {
-  width: 220px;
-  height: 100vh;
-  background-color: #4b2c20;
-  color: white;
-  padding: 20px;
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #2e3b3c;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .logo {
-  font-size: 1.8rem;
-  text-decoration: underline;
-  margin-bottom: 30px;
+  color: #f1c40f;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
 }
 
 .nav-links {
-  scroll-behavior: smooth;
   list-style: none;
-  padding: 0;
+  width: 100%;
+  padding-left: 0;
 }
 
 .nav-links li {
-  margin: 20px 0;
-  padding: 10px;
+  width: 100%;
+  margin: 10px 0;
 }
-.nav-links li:hover{
-  border-bottom: 3px solid gray;
-}
+
 .nav-links a {
+  display: block;
+  padding: 10px;
   color: white;
-  padding: 5px;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 18px;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #f0c674;
+  background-color: #f1c40f;
 }
 
+/* Content Styling */
 .content {
-  margin-left: 220px;
-  padding: 20px;
-  width: calc(100% - 220px);
+  margin-left: 250px;
+  padding: 40px;
 }
 
 .hero {
+  position: relative;
   background-size: cover;
   background-position: center;
-  height: 350px;
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 40px;
-  text-shadow: 2px 2px 5px black;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  font-style: italic;
 }
 
 section {
-  height: 500px;
-  border-radius: 5px;
-  padding: 20px;
   margin: 40px 0;
-  transition: 1s ease-in;
-
 }
 
-section > ul{
-  list-style-type: square;
-}
-
-section:hover{
-  color: white;
-  font-size: 20px;
-  background-image: linear-gradient(rgb(189, 66, 9),rgb(177, 197, 201));
-}
-section > h2{
-  background-color: rgb(207, 140, 102);
+h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #2e3b3c;
   text-align: center;
-  padding: 10px;
-  letter-spacing: 5px;
-  text-shadow: #d87953;
 }
 
+/* About Section */
+#about p {
+  font-size: 18px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Menu Section */
 .scroll-menu {
   display: flex;
-  gap: 15px;
-  overflow-x: auto;
-  padding: 10px 0;
+  overflow-x: scroll;
+  gap: 20px;
+  justify-content: center;
 }
 
 .scroll-menu img {
-  height: 200px;
-  width: 250px;
+  width: 200px;
+  height: 150px;
   object-fit: cover;
   border-radius: 10px;
-  flex-shrink: 0;
 }
 
+/* Specials Section */
+#specials ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+#specials li {
+  font-size: 18px;
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+/* Services Section */
+#services ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+#services li {
+  font-size: 18px;
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+/* Contact Section */
+#contact p {
+  font-size: 18px;
+  text-align: center;
+}
+
+#contact a {
+  color: #2e3b3c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Location Section */
+#location {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+#location iframe {
+  margin-top: 20px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Footer (if needed) */
+footer {
+  background-color: #2e3b3c;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .sidebar {
-    position: relative;
-    width: 100%;
-    height: auto;
+    width: 200px;
   }
 
   .content {
-    margin-left: 0;
-    width: 100%;
+    margin-left: 200px;
   }
 
-  .nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+  .hero h1 {
+    font-size: 40px;
   }
 
-  .nav-links li {
-    margin: 10px;
+  .hero p {
+    font-size: 18px;
+  }
+
+  .scroll-menu img {
+    width: 160px;
+    height: 120px;
   }
 }
-
