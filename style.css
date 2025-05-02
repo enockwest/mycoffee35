@@ -70,7 +70,8 @@ body {
   position: relative;
   background-size: cover;
   background-position: center;
-  color: white;
+  color: black;
+  text-shadow: 2px 3px 4px cyan;
   text-align: center;
   padding: 100px 20px;
 }
